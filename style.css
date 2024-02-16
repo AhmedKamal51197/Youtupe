@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  /* to reset the default value that browser make it in the begining*/
+ 
+html {
+    font-size: 10px;
+} /*to use rem : that use responsive design when i use 2rem --> it's equal 2*10 px casue when i make any change in page all of it's content change with it */
+body {
+    font-family: "Roboto","Arial", sans-serif;
+}
+header {
+ display: flex;
+ justify-content: space-between; 
+ align-items: center;
+ height: 56px;
+ /* space equals between 3 divs in header*/
+ padding: 0 16px;
+
+}
+.left-section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.left-section img {
+    width: 46%;
+    padding-left: 16px;
+}
+.mid-section {
+    display:flex ;
+    align-items: center;
+    margin-left: -9%;
+    /* margin-right: 9%; */
+}
+.mid-section form {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 500px; 
+}
+.mid-section input {
+    width :100%;
+    border-radius:25px 0 0 25px;
+    padding: 12px;
+    font-size: 1.6rem;
+    border:1px solid #d3d3d3;
+    border-right:none ;
+}
+.mid-section button {
+    width :64px;
+    border:1px solid #d3d3d3;
+    border-radius: 0 25px 25px 0;
+    padding :auto;
+    text-align: center;
+    font-size: 1.6rem;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+.mid-section button:hover {
+    border-color:#c6c6c6;
+    background-color:#f0f0f0;
+}
+.mid-section .mic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height: 40px;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    margin-left:10px;
+    cursor: pointer;
+}
+.right-section a {
+padding-right: 18px;
+text-decoration: none;
+color:black
+}
+.container {
+    height: 100vh; /* 56px for header 100vh all hight of page */
+    display: flex;
+    background-color: #f9f9f9;
+}
+aside {
+    height :100%;
+    width :280px;
+    background-color:white ; 
+    overflow-y: auto;
+    padding-right: 15px;
+    
+    
+}
+nav {
+    width :100%;
+    display: flex;
+    flex-direction: column;
+    margin:15px 0; 
+    background-color:white;
+}
+.nav-link {
+    display:flex;
+    align-items: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: black;
+}
+.nav-link:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+.nav-link span {
+    margin-left:24px ;
+    font-size: 1.4rem;
+    line-height: 2em;
+    font-weight: 400 ;
+    color :black;
+}
+.active {
+    background-color: #e5e5e5;
+}
+ #active-span {
+    color:black;
+    font-weight: 500;
+
+    
+}
+hr {
+    height: 1px;
+    background-color: #e5e5e5;
+    border: none;
+    margin: 10px 0;
+}
+.nav-p {
+    font-size: 1.4rem;
+    line-height:2em ;
+    color: #606060;
+    font-weight: 500;
+    padding: 8px 16px;
+    text-transform: uppercase;
+}
+.channel_img {
+    /* background-color: blue; */
+    display: flex;
+    /* justify-content: center; */
+    width:24px;
+    height: 24px;
+    border-radius: 50%;
+}
+main {
+     width:100%; /* 100% from container parent - aside width 280px*/
+     height: 100%;
+     padding: 35px 15px;
+     border-top: 1px solid #ddd;
+     overflow-y: auto;
+}
+.videos-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;/* leave space before and after element*/
+    flex-wrap:wrap ;/*casue when i minimize my page the videos or pictures go to next row if i didn't use it it will not be done casue flex direction was row*/ 
+
+}
+.video {
+    width:400px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+.thumbnail {
+    /* background-color: black; */
+    width:100%;
+    height: 187px;
+    margin-bottom: 12px;
+   
+}
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+.video-details {
+    display: flex;
+}
+.creator-img img {
+    width:40px ;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px; /*to make distance between image and title */
+}
+.title {
+    display: flex;
+    flex-direction: column;
+}
+.title a {
+    text-decoration: none;
+}
+.video-title {
+    color:rgb(3 , 3, 3);
+    font-size: 1.6rem;
+    max-width: 278px;/*some time i have long titles casue thumbnail width 330 margin and img width so reminder 278px */
+    font-weight: 500;
+    line-height: 2.2rem;
+    margin-bottom: 4px;
+    overflow:hidden ;
+    display: -webkit-box; /* to make line clamp run on google chrom*/
+    -webkit-line-clamp: 2;/* to cut line if it size more than 2 lines*/
+    -webkit-box-orient: vertical;
+}
+.video-creator , .title span {
+    color :rgb(96, 96, 96);
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+.video-creator:hover {
+    color: black ;
+}
